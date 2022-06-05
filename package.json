@@ -1,0 +1,27 @@
+{
+  "name": "evas-php.com",
+  "version": "0.0.1",
+  "description": "Documentation of the Evas PHP framework",
+  "main": "index.js",
+  "authors": {
+    "name": "Egor Vasyakin",
+    "email": "egor@evas-php.com"
+  },
+  "repository": "/evas-php.com",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "global:dev": "vuepress dev docs/_global",
+    "global:build": "vuepress build docs/_global",
+    "base:dev": "vuepress dev docs/base",
+    "base:build": "vuepress build docs/base",
+    "orm:dev": "vuepress dev docs/orm",
+    "orm:build": "vuepress build docs/orm",
+    "router:dev": "vuepress dev docs/router",
+    "router:build": "vuepress build docs/router"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
