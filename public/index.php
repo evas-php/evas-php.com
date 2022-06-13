@@ -26,17 +26,33 @@ $dir = dirname(__DIR__) . '/docs/' . $docsName . '/.vuepress/dist';
 if (!is_dir($dir)) send404('Empty docs directory');
 
 // получаем url
-$url = $_SERVER['REQUEST_URI'];
-if ('/' === substr($url, strlen($url) - 1)) $url .= 'index.html';
+$url = $beforeUrl = $_SERVER['REQUEST_URI'];
+$addingIndex = false;
+if ('/' === substr($url, strlen($url) - 1)) {
+    $url .= 'index.html';
+    $addingIndex = true;
+}
+
+// проверка наличия файла
+function hasFile(string $url = null) {
+    global $dir;
+    $filename = $dir . $url;
+    return is_file($filename);
+}
 
 // проверяем наличие файла документации
+if (!hasFile($url)) {
+    if ($addingIndex) {
+        $url = $beforeUrl . 'index.php';
+        if (!hasFile($url)) send404();
+    } else send404();
+}
 $filename = $dir . $url;
-if (!is_file($filename)) send404();
 
 // вычисляем заголовок Content-Type для url
 function getContentType(string $url) {
     $lastDotPos = strrpos($url, '.');
-    $ext = false === $lastDotPos ? 'html' : substr($url, $lastDotPos + 1);
+    $ext = false === $lastDotPos ? null : substr($url, $lastDotPos + 1);
     return [
         'js' => 'text/javascript',
         'css' => 'text/css',
