@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'EvasPHP Router',
+  title: 'Evas-Router',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -17,7 +17,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#617cbf' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -33,6 +33,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+    // logo: '/img/evas-php-logo.jpg',
     nav: [
       { text: 'Guide', link: '/guide/', },
       { text: 'Contact',
@@ -52,9 +53,8 @@ module.exports = {
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
+            '/guide/',
             '/guide/installation',
-            '/guide/start', 
-            '/guide/router-types', 
             '/guide/router-resolver-types', 
             '/guide/routing', 
           ]
@@ -80,12 +80,11 @@ module.exports = {
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/groups/map',
-            '/guide/groups/auto-by-file',
-            '/guide/groups/auto-by-class',
-            '/guide/groups/auto-by-method',
-            '/guide/groups/auto-by-class-method',
-            '/guide/groups/auto-by-func',
+            '/guide/routers/map',
+            '/guide/routers/auto-by-file',
+            '/guide/routers/auto-by-class',
+            '/guide/routers/auto-by-class-method',
+            '/guide/routers/auto-by-func',
           ],
         },
       ]
