@@ -9,16 +9,16 @@
   },
   "repository": "/evas-php.com",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
     "global:dev": "vuepress dev docs/_global",
-    "global:build": "vuepress build docs/_global",
     "base:dev": "vuepress dev docs/base",
-    "base:build": "vuepress build docs/base",
+    "db:dev": "vuepress dev docs/db",
     "orm:dev": "vuepress dev docs/orm",
-    "orm:build": "vuepress build docs/orm",
     "router:dev": "vuepress dev docs/router",
-    "router:build": "vuepress build docs/router"
+    "global:build": "vuepress build docs/_global  --dest=./builds/_global",
+    "base:build": "vuepress build docs/base --dest=./builds/base",
+    "db:build": "vuepress build docs/db --dest=./builds/db",
+    "orm:build": "vuepress build docs/orm --dest=./builds/orm",
+    "router:build": "vuepress build docs/router --dest=./builds/router"
   },
   "license": "MIT",
   "devDependencies": {
