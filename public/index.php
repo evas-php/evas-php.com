@@ -22,7 +22,8 @@ function getSubDomain() {
 $docsName = getSubDomain() ?? '_global';
 
 // проверяем наличие директории документации
-$dir = dirname(__DIR__) . '/docs/' . $docsName . '/.vuepress/dist';
+// $dir = dirname(__DIR__) . '/docs/' . $docsName . '/.vuepress/dist';
+$dir = dirname(__DIR__) . '/builds/' . $docsName;
 if (!is_dir($dir)) send404('Empty docs directory');
 
 // получаем url
