@@ -1,1 +1,7 @@
-# Query Builder
+# Queries
+
+## selects
+
+## updates
+
+## deletes
