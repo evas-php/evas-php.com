@@ -58,7 +58,20 @@ module.exports = {
           ]
         },
         {
-          title: 'QueryBuilder', 
+          title: 'Соединение', 
+          collapsable: false, // optional, defaults to true
+          sidebarDepth: 3,    // optional, defaults to 1
+          children: [
+            '/guide/connection/configuration',
+            '/guide/connection/connect',
+            '/guide/connection/manager',
+            '/guide/connection/transactions',
+            '/guide/connection/queries',
+            '/guide/connection/result',
+          ]
+        },
+        {
+          title: 'Сборщик запросов', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
