@@ -14,9 +14,11 @@
     "db:dev": "vuepress dev docs/db",
     "orm:dev": "vuepress dev docs/orm",
     "router:dev": "vuepress dev docs/router",
+    "http:dev": "vuepress dev docs/http",
     "global:build": "vuepress build docs/_global  --dest=./builds/_global",
     "base:build": "vuepress build docs/base --dest=./builds/base",
     "db:build": "vuepress build docs/db --dest=./builds/db",
+    "http:build": "vuepress build docs/http --dest=./builds/http",
     "orm:build": "vuepress build docs/orm --dest=./builds/orm",
     "router:build": "vuepress build docs/router --dest=./builds/router"
   },

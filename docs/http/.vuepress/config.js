@@ -57,6 +57,37 @@ module.exports = {
             '/guide/installation',
           ]
         },
+        {
+          title: 'Запрос', 
+          collapsable: false, // optional, defaults to true
+          sidebarDepth: 3,    // optional, defaults to 1
+          children: [
+            '/guide/request',
+            '/guide/request/http',
+            '/guide/request/cookie',
+            '/guide/request/curl',
+            '/guide/request/file',
+          ]
+        },
+        {
+          title: 'Ответ', 
+          collapsable: false, // optional, defaults to true
+          sidebarDepth: 3,    // optional, defaults to 1
+          children: [
+            '/guide/responce',
+            '/guide/responce/http',
+            '/guide/responce/curl',
+            '/guide/responce/cookie',
+          ]
+        },
+        {
+          title: 'Uri', 
+          collapsable: false, // optional, defaults to true
+          sidebarDepth: 3,    // optional, defaults to 1
+          children: [
+            '/guide/uri',
+          ]
+        },
       ]
     }
   },
