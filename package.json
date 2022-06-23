@@ -14,11 +14,13 @@
     "db:dev": "vuepress dev docs/db",
     "orm:dev": "vuepress dev docs/orm",
     "router:dev": "vuepress dev docs/router",
+    "validate:dev": "vuepress dev docs/validate",
     "global:build": "vuepress build docs/_global  --dest=./builds/_global",
     "base:build": "vuepress build docs/base --dest=./builds/base",
     "db:build": "vuepress build docs/db --dest=./builds/db",
     "orm:build": "vuepress build docs/orm --dest=./builds/orm",
-    "router:build": "vuepress build docs/router --dest=./builds/router"
+    "router:build": "vuepress build docs/router --dest=./builds/router",
+    "validate:build": "vuepress build docs/validate --dest=./builds/validate"
   },
   "license": "MIT",
   "devDependencies": {
