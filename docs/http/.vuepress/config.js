@@ -62,9 +62,8 @@ module.exports = {
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/request',
+            '/guide/request/',
             '/guide/request/http',
-            '/guide/request/cookie',
             '/guide/request/curl',
             '/guide/request/file',
           ]
@@ -74,10 +73,17 @@ module.exports = {
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/responce',
+            '/guide/responce/',
             '/guide/responce/http',
             '/guide/responce/curl',
-            '/guide/responce/cookie',
+          ]
+        },
+        {
+          title: 'Cookie', 
+          collapsable: false, // optional, defaults to true
+          sidebarDepth: 3,    // optional, defaults to 1
+          children: [
+            '/guide/cookie/',
           ]
         },
         {
@@ -85,7 +91,7 @@ module.exports = {
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/uri',
+            '/guide/uri/',
           ]
         },
       ]
