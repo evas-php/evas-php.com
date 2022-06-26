@@ -2,6 +2,46 @@
 
 ## Параметры
 
+| Аргумент | Тип | Описание |
+|-----------|-----|----------|
+| 1 | *string* | метод |
+
+```php
+protected $method;
+```
+
+| Аргумент | Тип | Описание |
+|-----------|-----|----------|
+| 1 | *string* | uri |
+
+```php
+protected $uri;
+```
+
+| Аргумент | Тип | Описание |
+|-----------|-----|----------|
+| 1 | *array* | параметры POST |
+
+```php
+protected $post = [];
+```
+
+| Аргумент | Тип | Описание |
+|-----------|-----|----------|
+| 1 | *array* | параметры GET |
+
+```php
+protected $query = [];
+```
+
+| Аргумент | Тип | Описание |
+|-----------|-----|----------|
+| 1 | *string* | ip пользователя |
+
+```php
+protected $userIp;
+```
+
 ## Методы
 
 ### getMethod
@@ -197,7 +237,7 @@ $http->getHeader('Content-Type: application/json');
 | 1 | *array|null* | имена |
 
 ```php
-$http->getHeaders();
+$http->getHeaders('Content-Type', 'Cookie');
 ```
 
 ### getHeaderLine
@@ -209,7 +249,7 @@ $http->getHeaders();
 | 1 | *string* | имя заголовка |
 
 ```php
-$http->getHeaderLine();
+$http->getHeaderLine('Cookie');
 ```
 
 ### getHeadersLines
@@ -221,7 +261,7 @@ $http->getHeaderLine();
 | 1 | *array|null* | имена |
 
 ```php
-$http->getHeadersLines();
+$http->getHeadersLines('Content-Type', 'Cookie');
 ```
 
 ### getHeadersNames
