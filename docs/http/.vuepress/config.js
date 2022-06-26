@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Evas-Db',
+  title: 'Evas-Http',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
