@@ -58,40 +58,42 @@ module.exports = {
           ]
         },
         {
-          title: 'Запрос', 
+          title: 'Http', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/request/',
-            '/guide/request/http',
-            '/guide/request/curl',
-            '/guide/request/file',
+            '/guide/http/request',
+            '/guide/http/response',
+            '/guide/http/uploaded-file',
           ]
         },
         {
-          title: 'Ответ', 
+          title: 'Curl', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/responce/',
-            '/guide/responce/http',
-            '/guide/responce/curl',
+            '/guide/curl/request',
+            '/guide/curl/response',
           ]
         },
         {
-          title: 'Cookie', 
+          title: 'Вспомогательные классы', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/cookie/',
+            '/guide/more/uri',
+            '/guide/more/cookie',
           ]
         },
         {
-          title: 'Uri', 
+          title: 'Интерфейсы', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/uri/',
+            '/guide/interfaces/request',
+            '/guide/interfaces/response',
+            '/guide/interfaces/uploaded-file',
+            '/guide/interfaces/uri',
           ]
         },
       ]
