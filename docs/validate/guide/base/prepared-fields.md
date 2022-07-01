@@ -92,7 +92,7 @@ class FloatField extends Field
 ## FullNameField
 `Evas\Validate\Fields\FullNameField`.
 
-Валидация пропускает полное имя вида: `Иван`, `Иван Иванов`
+Валидация пропускает полное или частичное имя вида: `Иван`, `Иван Иванов`, `John`, `John Doe`
 
 ```php
 /**
@@ -157,7 +157,7 @@ class IntField extends Field
 ## JsonEnumField
 `Evas\Validate\Fields\JsonEnumField`.
 
-Валидация переводит перечисления в json вида: `1, 2, 3`
+Валидация пропускает перечисления в json вида: `1, 2, 3`
 
 ```php
 /**
@@ -186,7 +186,7 @@ class JsonEnumField extends Field
 ## LoginField
 `Evas\Validate\Fields\LoginField`.
 
-Валидация пропускает логин вида: `test`
+Валидация пропускает логин вида: `test`, `hi_John.Doe-123`
 
 ```php
 /**
@@ -209,7 +209,7 @@ class LoginField extends Field
 ## NameField
 `Evas\Validate\Fields\NameField`.
 
-Валидация пропускает имя вида: `Иван`
+Валидация пропускает имя вида: `Иван`, `John`
 
 ```php
 /**
@@ -232,7 +232,7 @@ class NameField extends Field
 ## NumberField
 `Evas\Validate\Fields\NumberField`.
 
-Валидация пропускает число вида: `22.22`, `22.`
+Валидация пропускает число вида: `22.22`, `22.`, `22`
 
 ```php
 /**
@@ -254,7 +254,13 @@ class NumberField extends Field
 ## PhoneField
 `Evas\Validate\Fields\PhoneField`.
 
-Валидация пропускает номер телефона вида: `01234567890`
+Валидация пропускает номер телефона длиной от 10 до 16 **цифр**: `1234567890`, `01234567890`, `00001234567890`
+
+:::warning Из значения перед валидацией убираются все символы не являющиеся цифрами.
+Поэтому валидация пропускает ещё и: `123-456-78-90`, `+0 (123) 456-78-90`, `000012_3-4ABC 56- .Hello-_ .78-9 0`
+
+Значение после валидации, доступное в `$value`, будет состоять только из цифр.
+:::
 
 ```php
 /**
