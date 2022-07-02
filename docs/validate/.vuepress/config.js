@@ -73,6 +73,7 @@ module.exports = {
           children: [
             '/guide/base/fieldset',
             '/guide/base/json-fieldset',
+            '/guide/base/errors',
           ],
         },
         {
