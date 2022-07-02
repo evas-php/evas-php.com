@@ -9,7 +9,7 @@
 Позволяет объединить [установку валидаторов полей](#fields) и [свойств валидатора набора полей](#setprops).
 
 | Аргумент | Тип | Описание |
-|-----------|-----|----------|
+|----------|-----|----------|
 | 1 | *array\|null* | маппинг валидаторов полей или параметров валидаторов полей по их именам |
 | 2 | *array\|null* | параметры валидатора набора полей |
 
@@ -40,13 +40,13 @@ $fieldset = new Fieldset([
 Устанавливает валидатор поля
 
 | Аргумент | Тип | Описание |
-|-----------|-----|----------|
+|----------|-----|----------|
 | 1 | *string* | имя поля |
 | 2 | *[Field](/guide/base/field.html)\|array* | валидатор или параметры валидатора |
 
 ```php
-$validate->field('email', new EmailField);
-$validate->field('password', ['min' => 6, 'max' => 30]);
+$fieldset->field('email', new EmailField);
+$fieldset->field('password', ['min' => 6, 'max' => 30]);
 ```
 
 ### fields
@@ -54,11 +54,11 @@ $validate->field('password', ['min' => 6, 'max' => 30]);
 Устанавливает валидаторы полей
 
 | Аргумент | Тип | Описание |
-|-----------|-----|----------|
+|----------|-----|----------|
 | 1 | *array* | маппинг валидаторов полей или параметров валидаторов полей по их именам |
 
 ```php
-$validate->fields([
+$fieldset->fields([
     'email' => new EmailField,
     'password' => ['min' => 6, 'max' => 30],
 ]);
@@ -69,11 +69,11 @@ $validate->fields([
 Устанавливает свойства набора полей
 
 | Аргумент | Тип | Описание |
-|-----------|-----|----------|
+|----------|-----|----------|
 | 1 | *array* | маппинг свойств набора полей |
 
 ```php
-$validate->setProps([
+$fieldset->setProps([
     'name' => 'Авторизация',
     'valuesTypeError' => 'Данные набора полей <":name" > переданы в неверном формате.',
 ]);
@@ -96,13 +96,13 @@ $validate->setProps([
 Валидация данных
 
 | Аргумент | Тип | Описание |
-|-----------|-----|----------|
+|----------|-----|----------|
 | 1 | *array\|object* | Маппинг значений |
 | 2 | *bool\|null* | Проверять на все ошибки |
 | 3 | *bool\|null* | Вызывается ли из родительского набора полей |
 
 ```php
-$validate->isValid(['email' => 'test@test.com', 'password' => 'test']);
+$fieldset->isValid(['email' => 'test@test.com', 'password' => 'test']);
 ```
 
 ### throwIfNotValid
@@ -110,11 +110,11 @@ $validate->isValid(['email' => 'test@test.com', 'password' => 'test']);
 Проверяет данные на валидность с выбросом исключения `Evas\Validate\ValidateException` в случае первой попавшейся ошибки (Проверка на все ошибки недоступна).
 
 | Аргумент | Тип | Описание |
-|-----------|-----|----------|
+|----------|-----|----------|
 | 1 | *array\|object* | Маппинг значений |
 
 ```php
-$validate->throwIfNotValid(['email' => 'test@test.com', 'password' => 'test']);
+$fieldset->throwIfNotValid(['email' => 'test@test.com', 'password' => 'test']);
 ```
 
 
