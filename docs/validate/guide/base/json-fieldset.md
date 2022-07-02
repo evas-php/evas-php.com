@@ -5,9 +5,9 @@
 ## Свойства сообщений ошибок
 | Имя | Тип | Описание |
 |-----|-----|----------|
-| $jsonParseError | *string* | сообщение об ошибке разбора json |
-| $jsonEmptyError | *string* | сообщение об ошибке пустого json |
-| $jsonTypeError | *string* | сообщение об ошибке типа json - должен быть строкой |
+| $jsonParseError | *string* | шаблон ошибки разбора json |
+| $jsonEmptyError | *string* | шаблон ошибки пустого json |
+| $jsonTypeError | *string* | шаблон ошибки типа json, он должен быть строкой |
 
 ## Валидация
 
