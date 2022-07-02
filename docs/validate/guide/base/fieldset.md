@@ -120,7 +120,7 @@ $fieldset->throwIfNotValid(['email' => 'test@test.com', 'password' => 'test']);
 
 ## Получение ошибок валидации
 
-Метод `errors()` позволяет получить объект ошибок валидации 
+Метод `errors()` позволяет получить объект ошибок валидации `Evas\Validate\Errors`
 
 ```php
 $data = ['email' => 'test@test.com', 'password' => 'test'];
