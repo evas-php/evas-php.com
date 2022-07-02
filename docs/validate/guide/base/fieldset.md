@@ -13,13 +13,11 @@
 | 2 | *array\|null* | параметры валидатора набора полей |
 
 Сигнатура:
-
 ```php
 public function __construct(array $fields = null, array $props = null);
 ```
 
 Пример:
-
 ```php
 $fieldset = new Fieldset([
     'email' => new EmailField,
@@ -35,7 +33,6 @@ $fieldset = new Fieldset([
 ```
 
 ### field
-
 Устанавливает валидатор поля
 
 | Аргумент | Тип | Описание |
@@ -49,7 +46,6 @@ $fieldset->field('password', ['min' => 6, 'max' => 30]);
 ```
 
 ### fields
-
 Устанавливает валидаторы полей
 
 | Аргумент | Тип | Описание |
@@ -64,7 +60,6 @@ $fieldset->fields([
 ```
 
 ### setProps
-
 Устанавливает свойства набора полей
 
 | Аргумент | Тип | Описание |
@@ -96,7 +91,7 @@ $fieldset->setProps([
 | Аргумент | Тип | Описание | По умолчанию |
 |----------|-----|----------|--------------|
 | 1 | *array\|object* | маппинг значений |
-| 2 | *bool\|null\|null* | проверять на все ошибки | false |
+| 2 | *bool\|null* | проверять на все ошибки | false |
 | 3 | *bool\|null* | вызывается ли из родительского набора полей | false |
 
 ```php
