@@ -115,7 +115,7 @@ class FullNameField extends Field
 ## IdField
 `Evas\Validate\Fields\IdField`.
 
-Валидация пропускает id вида:
+Валидация пропускает id вида: `10123`, `20`
 
 ```php
 /**

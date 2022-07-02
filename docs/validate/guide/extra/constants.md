@@ -2,24 +2,28 @@
 
 ## EVAS\_VALIDATE\_ERRORS\_FILE
 
-Путь к файлу шаблонов ошибок по кодам
+Устанавливает путь к файлу шаблонов ошибок по кодам
 
 ```php
-const ERRORS_FILE = EVAS_VALIDATE_ERRORS_FILE;
+if (!defined('EVAS_VALIDATE_ERRORS_FILE')) {
+    define('EVAS_VALIDATE_ERRORS_FILE', __DIR__.'/../config/errors_default.php');
+}
 ```
 
 ## EVAS\_ALLOWABLE\_HTML\_TAGS\_DEFAULT
 
-Общее правило поддерживаемых html-тегов
+Устанавливает правило поддерживаемых html-тегов по умолчанию
 
 ```php
-public $allowableHtmlTags = EVAS_ALLOWABLE_HTML_TAGS_DEFAULT;
+if (!defined('EVAS_ALLOWABLE_HTML_TAGS_DEFAULT')) 
+    define('EVAS_ALLOWABLE_HTML_TAGS_DEFAULT', '');
 ```
 
 ## EVAS\_HTMLENTITIES\_DEFAULT
 
-Общее правило замены html-тегов на html-сущности
+Устанавливает общее правило замены html-тегов на html-сущности по умолчанию
 
 ```php
-public $htmlentities = EVAS_HTMLENTITIES_DEFAULT;
+if (!defined('EVAS_HTMLENTITIES_DEFAULT')) 
+    define('EVAS_HTMLENTITIES_DEFAULT', false);
 ```
