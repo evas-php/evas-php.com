@@ -37,7 +37,6 @@ $jsonFieldset->throwIfNotValid('{"email":"test@test.com", "password": "test123"}
 ```
 
 ## Получение ошибок валидации
-
 Метод `errors()` позволяет получить объект ошибок валидации
 
 ```php
@@ -46,10 +45,17 @@ $fieldset->errors();
 
 
 ## Получение отвалидированных значений
-
 В случае успеха валидации, отвалидированные значения будет доступны в переменной `$values` в виде ассоциативного массива с именами полей в качестве ключей.
 
 ```php
+$data = '{"email": "test@test.com", "password": "test123"}';
+
+$fieldset = (new JsonFieldset([
+    'email' => new EmailField,
+    'password' => ['min' => 6, 'max' => 30],
+])->throwIfNotValid($data);
+
+echo 'Привет, ' . $fieldset->values['email'] . '. Добро пожаловать на наш сайт.';
 ```
 
 
