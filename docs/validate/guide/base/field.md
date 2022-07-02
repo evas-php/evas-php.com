@@ -109,7 +109,7 @@ $field->throwIfNotValid('test');
 | 1 | *mixed\|null* | значение для проверки |
 
 ```php
-$field->checkType(22);
+$field->checkType('значение для проверки');
 ```
 
 ### checkLength
@@ -120,7 +120,7 @@ $field->checkType(22);
 | 1 | *mixed\|null* | значение для проверки |
 
 ```php
-$field->checkLength('length');
+$field->checkLength('значение для проверки');
 ```
 
 ### checkPattern
@@ -131,11 +131,10 @@ $field->checkLength('length');
 | 1 | *mixed\|null* | значение для проверки |
 
 ```php
-$field->checkPattern(22);
+$field->checkPattern('значение для проверки');
 ```
 
 ### checkOptions
-
 Проверяет на соответствие опциям
 
 | Аргумент | Тип | Описание |
@@ -143,7 +142,7 @@ $field->checkPattern(22);
 | 1 | *mixed\|null* | значение для проверки |
 
 ```php
-$field->checkOptions('RUB');
+$field->checkOptions('значение для проверки');
 ```
 
 
@@ -176,7 +175,6 @@ echo 'Hi there! I\'m ' . $field->value; // выводим отвалидиров
 ## Хуки
 
 ### afterValidate
-
 Срабатывает после валидации поля
 
 ```php
@@ -194,7 +192,6 @@ protected function afterValidate()
 Примеры можно посмотреть в [готовых валидаторах полей](/guide/base/prepared-fields.html).
 
 ### prepareValue
-
 Задаёт подготовку значения к валидации.
 
 Исользуется в кастомных валидаторах полей.
