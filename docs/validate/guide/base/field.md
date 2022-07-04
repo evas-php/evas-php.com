@@ -19,7 +19,7 @@ public function __construct(array $props = null);
 
 ```php
 // создаем и настраиваем валидатор поля
-new Field([
+$field = new Field([
     'label' => 'Email',
     'min' => 8,
     'max' => 60,
