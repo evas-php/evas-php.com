@@ -134,10 +134,10 @@ if (!$fieldset->isValid($data)) {
 ```php
 $data = ['email' => 'test@test.com', 'password' => 'test123'];
 
-$fieldset = new Fieldset([
+$fieldset = (new Fieldset([
     'email' => new EmailField,
     'password' => ['min' => 6, 'max' => 30],
-])->throwIfNotValid($data);
+]))->throwIfNotValid($data);
 
 echo 'Привет, ' . $fieldset->values['email'] . '. Добро пожаловать на наш сайт.';
 ```
