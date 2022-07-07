@@ -28,11 +28,13 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
+    repo: 'evas-php/evas-php.com',
+    editLinks: true,
+    docsDir: 'docs/validate',
+    docsBranch: 'evas-validate',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
+    contributors: true,
     // logo: '/img/evas-php-logo.jpg',
     nav: [
       { text: 'Guide', link: '/guide/', },
