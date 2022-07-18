@@ -31,6 +31,7 @@ module.exports = {
   theme: defaultTheme({
     editLinks: true,
     repo: 'evas-php/evas-php.com',
+    repoLabel: 'Docs GitHub',
     docsDir: 'docs/validate',
     docsBranch: 'evas-validate',
     editLinkText: 'Edit this page on GitHub',
@@ -39,11 +40,12 @@ module.exports = {
     // logo: '/img/evas-php-logo.jpg',
     navbar: [
       { text: 'Guide', link: '/guide/', },
-      { text: 'Contact',
+      { text: 'Community',
         children: [
+          { text: 'Discord Server', link: 'https://evas-php.com' },
+          { text: 'Telegram Chat', link: 'https://t.me/evasphp' },
           { text: 'Vk Community', link: 'https://vk.com/evasphp' },
-          { text: 'Facebook Page', link: 'https://facebook.com/evasphp' },
-          { text: 'Telegram Chat', link: 'https://t.me/evasphp' }
+          { text: 'Facebook Page', link: 'https://facebook.com/evasphp' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/evas-php' },
