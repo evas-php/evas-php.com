@@ -1,6 +1,10 @@
 const { description } = require('../../../package')
 const fs = require('fs');
 const path = require('path');
+
+const { defaultTheme } = require('@vuepress/theme-default')
+const { searchPlugin } = require('@vuepress/plugin-search')
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -17,9 +21,6 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#617cbf' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
 
   /**
@@ -27,19 +28,19 @@ module.exports = {
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
-  themeConfig: {
-    repo: 'evas-php/evas-php.com',
+  theme: defaultTheme({
     editLinks: true,
+    repo: 'evas-php/evas-php.com',
     docsDir: 'docs/validate',
     docsBranch: 'evas-validate',
-    editLinkText: '',
+    editLinkText: 'Edit this page on GitHub',
     lastUpdated: true,
     contributors: true,
     // logo: '/img/evas-php-logo.jpg',
-    nav: [
+    navbar: [
       { text: 'Guide', link: '/guide/', },
       { text: 'Contact',
-        items: [
+        children: [
           { text: 'Vk Community', link: 'https://vk.com/evasphp' },
           { text: 'Facebook Page', link: 'https://facebook.com/evasphp' },
           { text: 'Telegram Chat', link: 'https://t.me/evasphp' }
@@ -51,7 +52,7 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: 'Введение', 
+          text: 'Введение', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
@@ -60,7 +61,7 @@ module.exports = {
           ]
         },
         {
-          title: 'Валидатор поля', 
+          text: 'Валидатор поля', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
@@ -69,7 +70,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Валидатор набора полей', 
+          text: 'Валидатор набора полей', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
@@ -79,7 +80,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Дополнительно', 
+          text: 'Дополнительно', 
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
@@ -90,13 +91,18 @@ module.exports = {
         },
       ]
     }
-  },
+  }),
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    // '@vuepress/plugin-back-to-top',
+    '@vuepress/plugin-back-to-top',
     // '@vuepress/plugin-medium-zoom',
+    searchPlugin({
+      locales: {
+        '/': { placeholder: 'Найти' },
+      }
+    }),
   ]
 }
