@@ -9,3 +9,13 @@ html.dark {
   --c-brand: #617cbf;
   --c-brand-light: #617cbf;
 }
+
+// .navbar .navbar-item .external-link[aria-label="Docs GitHub"]
+.navbar .navbar-item:last-child
+{
+  display: none;
+}
+
+.navbar .search-box input[type="search"] {
+  padding-left: 2.2rem;
+}
