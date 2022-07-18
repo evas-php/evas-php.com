@@ -149,7 +149,7 @@ echo 'Привет, ' . $fieldset->values['email'] . '. Добро пожало�
 
 Пример:
 
-```PHP
+```php
 // LoginFieldset.php
 class LoginFieldset extends \Evas\Validate\Fieldset
 {
@@ -173,7 +173,7 @@ class LoginFieldset extends \Evas\Validate\Fieldset
 
 Исользуется в кастомных валидаторах набора полей.
 
-```PHP
+```php
 /**
  * Предустановленные поля валидатора.
  * @return array|null
@@ -193,7 +193,7 @@ public function presetFields(): ?array
 
 Исользуется в кастомных валидаторах набора полей.
 
-```PHP
+```php
 /**
  * Предустановленные свойства валидатора.
  * @return array|null
