@@ -3,7 +3,7 @@
 ## AmountField
 `Evas\Validate\Fields\AmountField`.
 
-Валидация пропускает денежную сумму вида: `1.00`, `1999.99`, `0.00`
+Валидация пропускает денежную сумму вида: `1.00`, `1999.99`, `0.00`, `'1.00'`, `'99.99'`
 
 ```php
 /**
@@ -25,7 +25,7 @@ class AmountField extends Field
 ## DateField
 `Evas\Validate\Fields\DataField`.
 
-Валидация пропускает дату вида: `2022-02-02`
+Валидация пропускает строку даты вида: `'2020-02-02'`
 
 ```php
 /**
@@ -46,7 +46,7 @@ class DateField extends Field
 ## EmailField
 `Evas\Validate\Fields\EmailField`.
 
-Валидация пропускает email вида: `test@test.com`
+Валидация пропускает строку email вида: `'test@test.com'`
 
 ```php
 /**
@@ -70,7 +70,7 @@ class EmailField extends Field
 ## FloatField
 `Evas\Validate\Fields\FloatField`.
 
-Валидация пропускает число float вида: `22.22`, `22.`
+Валидация пропускает строку или число вида: `22.22`, `22.`, `'0.11'`
 
 ```php
 /**
@@ -92,7 +92,7 @@ class FloatField extends Field
 ## FullNameField
 `Evas\Validate\Fields\FullNameField`.
 
-Валидация пропускает полное или частичное имя вида: `Иван`, `Иван Иванов`, `John`, `John Doe`
+Валидация пропускает полное или частичное имя вида: `'Иван'`, `'Иван Иванов'`, `'John'`, `'John Doe'`
 
 ```php
 /**
@@ -115,7 +115,7 @@ class FullNameField extends Field
 ## IdField
 `Evas\Validate\Fields\IdField`.
 
-Валидация пропускает id вида: `10123`, `20`
+Валидация пропускает число или строку id вида: `1`, `10123`, `20`
 
 ```php
 /**
@@ -136,7 +136,7 @@ class IdField extends Field
 ## IntField
 `Evas\Validate\Fields\IntField`.
 
-Валидация пропускает число int вида: `22`
+Валидация пропускает число или строку состоящую из цифр: `0`, `1`, `'22'`, `74`, `'90684317542'`
 
 ```php
 /**
@@ -157,7 +157,7 @@ class IntField extends Field
 ## JsonEnumField
 `Evas\Validate\Fields\JsonEnumField`.
 
-Валидация пропускает перечисления в json вида: `1, 2, 3`
+Валидация пропускает перечисления в json вида: `[1, 2, 3]`
 
 ```php
 /**
