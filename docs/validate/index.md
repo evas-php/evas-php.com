@@ -2,8 +2,10 @@
 home: true
 # heroImage: /img/evas-php-logo.jpg
 tagline: php библиотека для валидации данных.
-actionText: Начать →
-actionLink: /guide/
+actions: 
+- text: Начать →
+  link: /guide/
+  type: primary
 features:
 - title: Валидатор поля и набора полей
   details: Настраивайте правила валидации и валидируйте значения
@@ -17,5 +19,13 @@ features:
   details: Настраиваемое экранирование и сериализация html
 - title: Минимальные зависимости
   details: Никаких внешних зависимостей кроме Evas-Base
-footer: Made by Egor Vasyakin with ❤️
+footerHtml: true
+footer: 
+  <div>
+    Copyright © 2015-present | 
+    Made by <a href="https://github.com/evasyakin" target="_blank">Egor Vasyakin</a> with ❤️
+  </div>
+  <div>
+    <a href="https://github.com/evas-php/evas-validate/blob/main/LICENSE"  target="_blank">CC-BY-4.0 License</a>
+  </div>
 ---
