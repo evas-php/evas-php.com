@@ -17,9 +17,9 @@
 
 | Аргумент | Тип | Описание | По умолчанию |
 |----------|-----|----------|--------------|
-| 1 | *mixed* | значения в json |
-| 2 | *bool\|null* | проверять на все ошибки | false |
-| 3 | *bool\|null* | вызывается ли из родительского набора полей | false |
+| 1 | *mixed* | данные для валидации в виде json-строки |
+| 2 | *bool\|null* | проверять на все ошибки | `false` |
+| 3 | *bool\|null* | вызывается ли из родительского набора полей | `false` |
 
 ```php
 $jsonFieldset->isValid('{"email":"test@test.com", "password": "test123"}');
@@ -30,7 +30,7 @@ $jsonFieldset->isValid('{"email":"test@test.com", "password": "test123"}');
 
 | Аргумент | Тип | Описание |
 |----------|-----|----------|
-| 1 | *string\|null* | маппинг значений в json |
+| 1 | *mixed* | данные для валидации в виде json-строки |
 
 ```php
 $jsonFieldset->throwIfNotValid('{"email":"test@test.com", "password": "test123"}');
