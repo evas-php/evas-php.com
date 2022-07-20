@@ -86,9 +86,9 @@ module.exports = {
           collapsable: false, // optional, defaults to true
           sidebarDepth: 3,    // optional, defaults to 1
           children: [
-            '/guide/extra/constants',
             '/guide/extra/custom-errors',
             '/guide/extra/html-serialize',
+            '/guide/extra/constants',
           ],
         },
       ]
