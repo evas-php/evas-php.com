@@ -2,20 +2,52 @@
   // brand colors
   --c-brand: #617cbf;
   --c-brand-light: #617cbf;
+
+  // background colors
+  --c-bg-light: #f7f8f9;
+  --c-bg-lighter: #eeeeee;
+  --c-bg-thead: #eeeeee;
+
+  // border colors
+  --c-border-dark: #dfe2e5;
 }
 
 html.dark {
   // brand colors
   --c-brand: #617cbf;
   --c-brand-light: #617cbf;
+
+  // background colors
+  --c-bg-light: #282d34;
+  --c-bg-lighter: #1b212a;
+  --c-bg-thead: #303641;
+
+  // border colors
+  --c-border-dark: #36424e;
+
+  // custom container colors
+  --c-warning: #ceab00;
+  --c-warning-bg: #3e351b;
+  --c-warning-title: #ceac03;
+  --c-warning-text: #a96;
 }
 
 // .navbar .navbar-item .external-link[aria-label="Docs GitHub"]
-.navbar .navbar-item:last-child
-{
+.navbar .navbar-item:last-child {
   display: none;
 }
 
 .navbar .search-box input[type="search"] {
   padding-left: 2.2rem;
+}
+
+.home .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+}
+
+
+thead tr:nth-child(2n + 1) {
+  background-color: var(--c-bg-thead);
 }
