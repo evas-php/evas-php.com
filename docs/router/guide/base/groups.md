@@ -19,7 +19,7 @@
 | 2 | *string\|callable* | метод или функция настройки роутера |
 | 3 | *callable\|null* | функция настройки роутера или null |
 
-```PHP
+```php
 // этот вложенный роутер сработает при любом методе запроса
 $router->map('/account', function () {
     // настройка вложенного маппинг роутера через контекст $this
@@ -27,7 +27,7 @@ $router->map('/account', function () {
 });
 ```
 
-```PHP
+```php
 // этот вложенный роутер сработает только при POST методе запроса
 $router->map('/account', 'POST', function () {
     // настройка вложенного маппинг роутера через контекст $this
@@ -45,7 +45,7 @@ $router->map('/account', 'POST', function () {
 | 2 | *string\|callable* | метод или функция настройки роутера |
 | 3 | *callable\|null* | функция настройки роутера или null |
 
-```PHP
+```php
 $router->autoByFile('/', function () {
     // настройка вложенного автороутера через контекст $this
 });
@@ -62,7 +62,7 @@ $router->autoByFile('/', function () {
 | 2 | *string\|callable* | метод или функция настройки роутера |
 | 3 | *callable\|null* | функция настройки роутера или null |
 
-```PHP
+```php
 $router->autoByClass('/api/v1/user/', function () {
     // настройка вложенного автороутера через контекст $this
 });
@@ -78,7 +78,7 @@ $router->autoByClass('/api/v1/user/', function () {
 | 2 | *string\|callable* | метод или функция настройки роутера |
 | 3 | *callable\|null* | функция настройки роутера или null |
 
-```PHP
+```php
 $router->autoByMethod('/api/v1/', function () {
     // настройка вложенного автороутера через контекст $this
 });
@@ -94,7 +94,7 @@ $router->autoByMethod('/api/v1/', function () {
 | 2 | *string\|callable* | метод или функция настройки роутера |
 | 3 | *callable\|null* | функция настройки роутера или null |
 
-```PHP
+```php
 $router->autoByFunc('/api/v1/', function () {
     // настройка вложенного автороутера через контекст $this
 });

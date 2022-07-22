@@ -7,7 +7,7 @@
 |-----------|-----|----------|
 | 1 | *Evas\Http\Interfaces\RequestInterface* | объект запроса |
 
-```PHP
+```php
 $router->requestRouting(App::request());
 ```
 
@@ -20,6 +20,6 @@ $router->requestRouting(App::request());
 | 2 | *string\|null* | метод или null |
 | 3 | *array\|null* | свойства пути или null |
 
-```PHP
+```php
 $router->routing('/api/v1/user/list', 'GET');
 ```

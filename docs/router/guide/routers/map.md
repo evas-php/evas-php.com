@@ -6,7 +6,7 @@
 - ALL /account/ - вызовет AccountController->profile()
 - GET /account/edit - вызовет AccountController->edit()
 - POST /account/save - вызовет AccountController->save()
-```PHP
+```php
 $router->map('/account/', function () {
     // настройка вложенного маппинг роутера через контекст $this
     $this->all('', [AccountController::class => 'profile'])

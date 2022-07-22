@@ -11,7 +11,7 @@
 |-----------|-----|----------|
 | 1 | *string* | Относительный или абсолютный путь |
 
-```PHP
+```php
 $router->viewsDir('views/pages');
 ```
 
@@ -27,7 +27,7 @@ $router->viewsDir('views/pages');
 Устанавливает директорию отображений по умолчанию
 
 По умолчанию установлено: `views/`
-```PHP
+```php
 if (!defined('EVAS_VIEWS_DIR')) define('EVAS_VIEWS_DIR', 'views/');
 ```
 

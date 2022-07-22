@@ -1,7 +1,7 @@
 # Виды обработчиков роутинга
 
 - Анонимная функция
-```PHP
+```php
 $func = function () {
     // do something
 };
@@ -16,7 +16,7 @@ $router->get('/something', function () {
 });
 ```
 - Метод класса
-```PHP
+```php
 class UserController
 {
     public function list() {
@@ -28,7 +28,7 @@ class UserController
 $router->get('/users/list', [UserController::class => 'list']);
 ```
 - Файл
-```PHP
+```php
 // ./view/home.php
 // do something
 
@@ -37,7 +37,7 @@ $router->get('/', 'home.php');
 ```
 
 - Несколько обработчиков
-```PHP
+```php
 // устанавливаем массив обработчиков в мап-роутер
 $router->get('/users/list', [
     function () {
