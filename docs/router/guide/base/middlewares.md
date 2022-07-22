@@ -15,18 +15,18 @@
 | 1 | *... (string\|\Closure\|array)* | Обработчик/обработчики middleware |
 
 Сигнатура
-```PHP
+```php
 public function middleware(...$middlewares): RouterInterface;
 ```
 
 ### Установка middleware
 
-```PHP
+```php
 $router->middleware([CheckAccess::class => 'isLogged']);
 ```
 
 ### Установка middlewares
-```PHP
+```php
 $router->middleware(
     [CheckAccess::class => 'isLogged'],
     [CheckAccess::class => 'isAdmin']
@@ -38,7 +38,7 @@ $router->middleware(
 можно переопределить с помощью константы EVAS_ROUTER_MIDDLEWARES_DEEP_LIMIT
 :::
 
-```PHP
+```php
 if (!defined('EVAS_ROUTER_MIDDLEWARES_DEEP_LIMIT')) {
     define('EVAS_ROUTER_MIDDLEWARES_DEEP_LIMIT', 5);
 }

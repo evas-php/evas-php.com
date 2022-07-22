@@ -5,7 +5,7 @@
 чтобы избежать проблем в автороутинге
 
 :::details \Evas\Router\Interfaces\ControllerInterface
-```PHP
+```php
 namespace Evas\Router\Interfaces;
 
 interface ControllerInterface
@@ -35,7 +35,7 @@ interface ControllerInterface
 |-----------|-----|----------|
 | 1 | *string* | Имя класса |
 
-```PHP
+```php
 $router->controllerClass(\Evas\Router\Controller::class);
 ```
 
@@ -50,7 +50,7 @@ $router->controllerClass(\Evas\Router\Controller::class);
 Устанавливает контроллер по умолчанию
 
 По умолчанию установлен класс: `\Evas\Router\Controller`
-```PHP
+```php
 if (!defined('EVAS_CONTROLLER_CLASS')) define('EVAS_CONTROLLER_CLASS', Controller::class);
 ```
 
