@@ -8,6 +8,9 @@ const config = (new ConfigBuilder)
   title: 'Evas-Validate',
   description: 'Official documentation of the Evas-Validate php library'
 })
+.setRepo({
+  docsDir: 'docs/validate'
+})
 .addNavbarRepo('evas-validate')
 .setSidebar({
   '/guide/': [
