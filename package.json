@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "Documentation of the Evas PHP framework",
   "main": "index.js",
-  "authors": {
+  "author": {
     "name": "Egor Vasyakin",
-    "email": "egor@evas-php.com"
+    "email": "egor@evas-php.com",
+    "url" : "https://github.com/evasyakin"
   },
-  "repository": "/evas-php.com",
+  "repository": "https://github.com/evas-php/evas-php.com",
   "scripts": {
     "global:dev": "vuepress dev docs/_global",
     "base:dev": "vuepress dev docs/base",
