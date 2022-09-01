@@ -2,8 +2,8 @@ const { ConfigBuilder } = require('../../../common/ConfigBuilder.js')
 
 const config = (new ConfigBuilder)
 .setMeta({
-  title: 'Evas-Router',
-  description: 'Official documentation of the Evas-Router php library'
+  title: 'Evas-Http',
+  description: 'Official documentation of the Evas-Http php library'
 })
 .setRepo({
   docsDir: 'docs/router'
