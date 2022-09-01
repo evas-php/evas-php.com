@@ -1,4 +1,4 @@
-# Http-запрос
+# Http-Запрос
 
 Класс `Evas\Http\HttpRequest` является объектом http-запроса.
 
