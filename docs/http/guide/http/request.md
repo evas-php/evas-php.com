@@ -14,12 +14,12 @@
 |----------|-----|----------|
 | 1 | *[HttpRequest](/guide/http/request.html)\|null* | уже существующий объект http-запроса, если его нужно переконфигурировать |
 
-```PHP
+```php
 $request = Evas\Http\HttpRequest::createFromGlobals();
 ```
 
 :::details У объекта http-запроса будут установлены свойства
-```PHP
+```php
 ->withMethod($_SERVER['REQUEST_METHOD'])
 ->withUri($_SERVER['REQUEST_URI'])
 ->withHeaders(static::getAllHeaders())
@@ -40,7 +40,7 @@ $request = Evas\Http\HttpRequest::createFromGlobals();
 
 Например, с помощью такого кода можно создать новый http-запрос и сконфигурировать его так же как это сделал бы [createFromGlobals](#createfromglobals):
 
-```PHP
+```php
 $request = (new \Evas\Http\HttpRequest)
 ->withMethod($_SERVER['REQUEST_METHOD'])
 ->withUri($_SERVER['REQUEST_URI'])
@@ -60,7 +60,7 @@ $request = (new \Evas\Http\HttpRequest)
 |-----------|-----|----------|
 | 1 | *string* | метод запроса |
 
-```PHP
+```php
 $request->withMethod('GET');
 ```
 
@@ -71,7 +71,7 @@ $request->withMethod('GET');
 |-----------|-----|----------|
 | 1 | *[UriInteface](/guide/interfaces/uri.html)\|string\|null* | uri запроса |
 
-```PHP
+```php
 $request->withUri('http://example.com/api/v1/user/list');
 ```
 
