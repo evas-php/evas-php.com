@@ -6,9 +6,9 @@ const config = (new ConfigBuilder)
   description: 'Official documentation of the Evas-Http php library'
 })
 .setRepo({
-  docsDir: 'docs/router'
+  docsDir: 'docs/http'
 })
-.addNavbarRepo('evas-router')
+.addNavbarRepo('evas-http')
 .setSidebar({
   '/guide/': [
     {
