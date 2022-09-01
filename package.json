@@ -3,27 +3,31 @@
   "version": "0.0.1",
   "description": "Documentation of the Evas PHP framework",
   "main": "index.js",
-  "authors": {
+  "author": {
     "name": "Egor Vasyakin",
-    "email": "egor@evas-php.com"
+    "email": "egor@evas-php.com",
+    "url" : "https://github.com/evasyakin"
   },
-  "repository": "/evas-php.com",
+  "repository": "https://github.com/evas-php/evas-php.com",
   "scripts": {
     "global:dev": "vuepress dev docs/_global",
     "base:dev": "vuepress dev docs/base",
     "db:dev": "vuepress dev docs/db",
+    "http:dev": "vuepress dev docs/http",
     "orm:dev": "vuepress dev docs/orm",
     "router:dev": "vuepress dev docs/router",
-    "http:dev": "vuepress dev docs/http",
+    "validate:dev": "vuepress dev docs/validate",
     "global:build": "vuepress build docs/_global  --dest=./builds/_global",
     "base:build": "vuepress build docs/base --dest=./builds/base",
     "db:build": "vuepress build docs/db --dest=./builds/db",
     "http:build": "vuepress build docs/http --dest=./builds/http",
     "orm:build": "vuepress build docs/orm --dest=./builds/orm",
-    "router:build": "vuepress build docs/router --dest=./builds/router"
+    "router:build": "vuepress build docs/router --dest=./builds/router",
+    "validate:build": "vuepress build docs/validate --dest=./builds/validate"
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3"
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
+    "vuepress": "^2.0.0-beta.49"
   }
 }

@@ -1,3 +1,8 @@
 node_modules
 builds
 dist
+
+.temp
+.cache
+
+package-lock.json

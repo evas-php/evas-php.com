@@ -25,7 +25,7 @@ Url после базового url автороутера, разбиваетс
 
 
 Пример:
-```PHP
+```php
 $router->autoByMethod('/api/', function () {
     $this->classPrefix('Controllers\\Api\\')->classPostfix('Controller')
     ->methodPostfix('Action');
@@ -49,7 +49,7 @@ $router->autoByMethod('/api/', function () {
 |-----------|-----|----------|
 | 1 | *string* | префикс класса |
 
-```PHP
+```php
 $router->classPrefix('Api\\V1\\Users\\');
 ```
 
@@ -61,7 +61,7 @@ $router->classPrefix('Api\\V1\\Users\\');
 |-----------|-----|----------|
 | 1 | *string* | постфикс класса |
 
-```PHP
+```php
 $router->classPostfix('Controller');
 ```
 
@@ -75,7 +75,7 @@ $router->classPostfix('Controller');
 |-----------|-----|----------|
 | 1 | *string* | кастомное имя класса |
 
-```PHP
+```php
 $router->classCustom(\Controllers\Api\ApiController::class);
 ```
 
@@ -87,7 +87,7 @@ $router->classCustom(\Controllers\Api\ApiController::class);
 |-----------|-----|----------|
 | 1 | *string* | префикс метода |
 
-```PHP
+```php
 $router->methodPrefix('auto');
 ```
 
@@ -99,7 +99,7 @@ $router->methodPrefix('auto');
 |-----------|-----|----------|
 | 1 | *string* | постфикс метода |
 
-```PHP
+```php
 $router->methodPostfix('Action');
 ```
 
@@ -111,7 +111,7 @@ $router->methodPostfix('Action');
 
 Будет перезаписан функцией [classPrefix()](#classprefix)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_CLASS_PREFIX'))
     define('EVAS_AUTOROUTER_CLASS_PREFIX', '');
 ```
@@ -122,7 +122,7 @@ if (!defined('EVAS_AUTOROUTER_CLASS_PREFIX'))
 
 Будет перезаписан функцией [classPostfix()](#classpostfix)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_CLASS_POSTFIX'))
     define('EVAS_AUTOROUTER_CLASS_POSTFIX', '');
 ```
@@ -133,7 +133,7 @@ if (!defined('EVAS_AUTOROUTER_CLASS_POSTFIX'))
 
 Будет перезаписан функцией [methodPrefix()](#methodprefix)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_METHOD_PREFIX'))
     define('EVAS_AUTOROUTER_METHOD_PREFIX', '');
 ```
@@ -144,7 +144,7 @@ if (!defined('EVAS_AUTOROUTER_METHOD_PREFIX'))
 
 Будет перезаписан функцией [methodPostfix()](#methodpostfix)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_METHOD_POSTFIX'))
     define('EVAS_AUTOROUTER_METHOD_POSTFIX', '');
 ```

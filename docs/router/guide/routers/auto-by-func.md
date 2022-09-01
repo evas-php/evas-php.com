@@ -7,7 +7,7 @@
 :::
 
 Пример:
-```PHP
+```php
 $router->autoByFunc('/', function () {
     $this->routingFunc(function (string $path) {
         $filePrefix = 'auto/';
@@ -44,7 +44,7 @@ $router->autoByFunc('/', function () {
 - assoc array - для обработчика в виде метода класса
 - numeric array - для массива обработчиков
 
-```PHP
+```php
 $router->routingFunc(function (strin $path) {
     // аргумент функции $path содержит остаток пути, 
     // по которому описывается вычисление обработчика

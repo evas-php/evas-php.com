@@ -7,7 +7,7 @@
 - Пример передачи свойств пути в анонимную функцию
 
 Аргументы пути передаются в аргументы функции
-```PHP
+```php
 $router->get('/users/(\d+)', function ($user_id) {
     echo "show user with id = $user_id";
 });
@@ -17,7 +17,7 @@ $router->get('/users/(\d+)', function ($user_id) {
 
 Аргументы пути передаются в аргументы метода класса
 
-```PHP
+```php
 $router->get('/users/(\d+)/(add|save|delete)', [UserController::class => 'doAction']);
 
 // class UserController
@@ -32,7 +32,7 @@ class UserController
 - Пример передачи свойств пути в файл
 
 Аргументы пути доступны в массиве `$args`
-```PHP
+```php
 $router->get('/users/(\d+)/(add|save|delete)', 'users.php');
 
 // ./view/users.php

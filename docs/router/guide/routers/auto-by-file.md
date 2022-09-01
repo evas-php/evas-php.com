@@ -9,7 +9,7 @@ Url после базового url автороутера преобразуе�
 :::
 
 Пример:
-```PHP
+```php
 $router->autoByFile('/', function () {
     // настройка вложенного автороутера через контекст $this
     $this->filePrefix('site/') // префикс файла
@@ -33,7 +33,7 @@ $router->autoByFile('/', function () {
 |-----------|-----|----------|
 | 1 | *string* | префикс |
 
-```PHP
+```php
 $router->filePrefix('site/');
 ```
 
@@ -45,7 +45,7 @@ $router->filePrefix('site/');
 |-----------|-----|----------|
 | 1 | *string* | постфикс |
 
-```PHP
+```php
 $router->filePostfix('.php');
 ```
 
@@ -57,7 +57,7 @@ $router->filePostfix('.php');
 
 Будет перезаписан функцией filePrefix()
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_FILE_PREFIX')) 
     define('EVAS_AUTOROUTER_FILE_PREFIX', '');
 ```
@@ -68,7 +68,7 @@ if (!defined('EVAS_AUTOROUTER_FILE_PREFIX'))
 
 Будет перезаписан функцией filePostfix()
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_FILE_POSTFIX')) 
     define('EVAS_AUTOROUTER_FILE_POSTFIX', '.php');
 ```

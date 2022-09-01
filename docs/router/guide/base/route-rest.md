@@ -3,7 +3,7 @@
 Это сокращенный вариант для [route()](/guide/base/route.html#установка-маршрута)
 
 ## По умолчанию установлены
-```PHP
+```php
 define('EVAS_ROUTER_REST_METHODS', [
     'GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'
 ]);
@@ -24,7 +24,7 @@ define('EVAS_ROUTER_REST_METHODS', [
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->get('/', 'home.php');
 ```
 
@@ -37,7 +37,7 @@ $router->get('/', 'home.php');
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->post('/', 'home.php');
 ```
 
@@ -50,7 +50,7 @@ $router->post('/', 'home.php');
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->put('/', 'home.php');
 ```
 
@@ -63,7 +63,7 @@ $router->put('/', 'home.php');
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->delete('/', 'home.php');
 ```
 
@@ -76,7 +76,7 @@ $router->delete('/', 'home.php');
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->options('/', 'home.php');
 ```
 
@@ -89,7 +89,7 @@ $router->options('/', 'home.php');
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->patch('/', 'home.php');
 ```
 
@@ -102,6 +102,6 @@ $router->patch('/', 'home.php');
 | 1 | *string* | Путь |
 | 2 | *string\|\Closure\|array* | Обработчик/обработчики маршрута |
 
-```PHP
+```php
 $router->all('/', 'home.php');
 ```

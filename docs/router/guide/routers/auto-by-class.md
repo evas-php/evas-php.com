@@ -13,7 +13,7 @@
 
 
 Пример:
-```PHP
+```php
 $router->autoByClass('/api/v1/user/', function () {
     // настройка вложенного автороутера через контекст $this
     $this->classPrefix('Api\\V1\\User\\') // Префикс класса
@@ -37,7 +37,7 @@ $router->autoByClass('/api/v1/user/', function () {
 |-----------|-----|----------|
 | 1 | *string* | префикс |
 
-```PHP
+```php
 $router->classPrefix('Api\\V1\\Users\\');
 ```
 
@@ -49,7 +49,7 @@ $router->classPrefix('Api\\V1\\Users\\');
 |-----------|-----|----------|
 | 1 | *string* | постфикс |
 
-```PHP
+```php
 $router->classPostfix('Action');
 ```
 
@@ -61,7 +61,7 @@ $router->classPostfix('Action');
 |-----------|-----|----------|
 | 1 | *string* | имя метода |
 
-```PHP
+```php
 $router->classMethod('run');
 ```
 
@@ -73,7 +73,7 @@ $router->classMethod('run');
 
 Будет перезаписан функцией [classPrefix()](#classprefix)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_CLASS_PREFIX'))
     define('EVAS_AUTOROUTER_CLASS_PREFIX', '');
 ```
@@ -84,7 +84,7 @@ if (!defined('EVAS_AUTOROUTER_CLASS_PREFIX'))
 
 Будет перезаписан функцией [classPostfix()](#classpostfix)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_CLASS_POSTFIX'))
     define('EVAS_AUTOROUTER_CLASS_POSTFIX', '');
 ```
@@ -95,7 +95,7 @@ if (!defined('EVAS_AUTOROUTER_CLASS_POSTFIX'))
 
 Будет перезаписан функцией [classMethod()](#classmethod)
 
-```PHP
+```php
 if (!defined('EVAS_AUTOROUTER_CLASS_METHOD'))
     define('EVAS_AUTOROUTER_CLASS_METHOD', 'auto');
 ```
