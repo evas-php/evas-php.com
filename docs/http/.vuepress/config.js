@@ -21,6 +21,18 @@ const config = (new ConfigBuilder)
       ]
     },
     {
+      text: 'Трейты', 
+      collapsable: false,
+      sidebarDepth: 3,
+      children: [
+        '/guide/traits/http-body-trait/',
+        '/guide/traits/http-headers-trait/',
+        '/guide/traits/http-cookie-trait/',
+        '/guide/traits/http-set-cookie-trait/',
+        '/guide/traits/uploaded-files-trait/',
+      ],
+    },
+    {
       text: 'Http', 
       collapsable: false,
       sidebarDepth: 3,
